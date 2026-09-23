@@ -1,11 +1,5 @@
-const fallbackImages = [];
+const fallbackImages = ["./slideshow/01.png", "./slideshow/02.png"];
 
-const captions = [
-  "Fællesskab begynder med et møde",
-  "Mennesker mødes bedst ansigt til ansigt",
-  "Et fællesskab midt i Slagelse",
-  "Tid til samtaler, samvær og nye perspektiver"
-];
 
 const stories = [
   {
@@ -28,13 +22,20 @@ const stories = [
     text:"Et fast holdepunkt i hverdagen med fællesskab, refleksion og samvær.",
     factTitle:"Du behøver ikke kende nogen.",
     factText:"Nysgerrighed er et ganske fint sted at begynde."
+  },
+  {
+    label:"KOM INDENFOR · 30. SEPTEMBER",
+    title:"Nysgerrig på<br>Odd Fellow?",
+    text:"Kom og spis med os og hør, hvad fællesskabet handler om.<br><strong>Vi giver middagen.</strong>",
+    factTitle:"Du behøver ikke komme alene.",
+    factText:"Tag gerne en ven med · Gratis og helt uforpligtende."
   }
 ];
 
 const myths = [
   ["“Odd Fellow er kun for ældre.”","Nej. Fællesskabet er for voksne i forskellige aldre, og nye medlemmer er velkomne."],
   ["“Det er en hemmelig orden.”","Nej. Vi fortæller gerne, hvem vi er, og hvad vi står for. Enkelte traditioner hører til i logen."],
-  ["“Man skal kende nogen for at komme ind.”","Nej. Du kan sagtens selv tage kontakt, hvis du er nysgerrig på fællesskabet."],
+  ["“Man skal kende nogen for at komme ind.”","Nej. Du kan selv tage kontakt – og du er selvfølgelig velkommen til at tage en ven med."],
   ["“Det handler om religion.”","Odd Fellow bygger på etiske værdier og menneskeligt fællesskab – ikke på en bestemt religion."],
   ["“Det er bare højtidelige møder.”","Nej. Traditioner er en del af det, men samvær, samtaler og fællesskab fylder mindst lige så meget."]
 ];
@@ -52,7 +53,6 @@ async function loadImages(){
 
 const photo=document.querySelector(".photo");
 const img=document.getElementById("slideImage");
-const cap=document.getElementById("slideCaption");
 const prog=document.getElementById("progress");
 let si=0,sti=0,mi=0;
 const DUR=8500;
@@ -76,7 +76,6 @@ loadImages().then(images=>{
       photo.classList.add("changing");
       setTimeout(()=>{
         img.src=images[si];
-        cap.textContent=captions[si%captions.length];
         photo.classList.remove("changing");
         progress();
       },550);

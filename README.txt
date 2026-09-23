@@ -35,3 +35,12 @@ GitHub Action:
 
 QR-koden peger på:
 https://concordia35.github.io/Oddfellow/
+
+
+BILLEDER UDEN TEKST
+Billedfeltet viser nu kun billederne uden tekst/overlay.
+
+SÅDAN TILFØJER DU FLERE BILLEDER
+På GitHub: åbn mappen slideshow, vælg Add file > Upload files, og upload JPG/PNG/WEBP/GIF/AVIF.
+Workflowen .github/workflows/update-slideshow.yml opdaterer automatisk billeder.json.
+Projektoren opdager ændringen, genindlæser og cacher de nye billeder, når den er online.
