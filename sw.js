@@ -1,4 +1,4 @@
-const CACHE_NAME = "of-slagelse-pwa-v6-all-slides";
+const CACHE_NAME = "of-slagelse-pwa-v7-more-slides";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -17,7 +17,12 @@ const PRECACHE = [
   "./slideshow/05.jpg",
   "./slideshow/06.jpg",
   "./slideshow/07.jpg",
-  "./slideshow/08.jpg"
+  "./slideshow/08.jpg",
+  "./slideshow/09.jpg",
+  "./slideshow/10.jpg",
+  "./slideshow/11.jpg",
+  "./slideshow/12.jpg",
+  "./slideshow/13.jpg"
 ];
 
 self.addEventListener("install", event => {
