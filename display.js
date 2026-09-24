@@ -1,4 +1,4 @@
-const fallbackImages = ["./slideshow/01.png", "./slideshow/02.png"];
+const fallbackImages = ["./slideshow/01.png", "./slideshow/02.png", "./slideshow/03.jpg", "./slideshow/04.jpg", "./slideshow/05.jpg", "./slideshow/06.jpg", "./slideshow/07.jpg", "./slideshow/08.jpg", "./slideshow/ChatGPT Image 23. sep. 2026, 08.07.37.png"];
 
 const captions = [
   "Mennesker mødes bedst ansigt til ansigt",

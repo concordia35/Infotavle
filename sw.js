@@ -1,4 +1,4 @@
-const CACHE_NAME = "of-slagelse-pwa-v4-projector";
+const CACHE_NAME = "of-slagelse-pwa-v5-clean-photos";
 const PRECACHE = [
   "./",
   "./index.html",
