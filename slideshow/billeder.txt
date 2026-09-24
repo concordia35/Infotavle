@@ -1,6 +1,8 @@
-01-billede4_samtale.png
-02-billede1_bygning.png
-
-# Skriv ét filnavn pr. linje.
-# Eksempel: nyt-billede.jpg
-# Linjer der starter med # ignoreres.
+01.png
+02.png
+03.jpg
+04.jpg
+05.jpg
+06.jpg
+07.jpg
+08.jpg
