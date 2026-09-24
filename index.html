@@ -6,10 +6,8 @@
 <meta name="theme-color" content="#651f32">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" href="./icons/icon-192.png">
-<link rel="apple-touch-icon" href="./icons/icon-192.png">
 <title>Odd Fellow i Slagelse · Infotavle</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -38,6 +36,11 @@
   <section class="right">
     <article class="photo slideshow-card">
       <img id="slideImage" src="slideshow/01.png" alt="">
+      <div class="shade"></div>
+      <div class="caption">
+        <div class="caption-kicker">ODD FELLOW I SLAGELSE</div>
+        <h2 id="slideCaption">Mennesker mødes bedst ansigt til ansigt</h2>
+      </div>
       <div class="progress"><span id="progress"></span></div>
     </article>
 
@@ -57,19 +60,18 @@
       <b>Sct. Gertrud</b><i>·</i><b>Concordia</b><i>·</i><b>Hellig Anders</b>
     </div>
     <div class="scan">
-      <div><strong>Interesseret?</strong><span>Scan koden</span></div>
+      <div><strong>Vil du vide mere?</strong><span>Scan koden</span></div>
       <img src="qr-folder.png" alt="QR-kode">
     </div>
   </footer>
 </main>
 <script src="display.js"></script>
-
 <script>
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js", { scope: "./" }).catch(console.error);
+    navigator.serviceWorker.register("./sw.js", {scope:"./"}).catch(console.error);
   });
 }
 </script>
-
-</body></html>
+</body>
+</html>

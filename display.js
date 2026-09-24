@@ -1,5 +1,12 @@
 const fallbackImages = ["./slideshow/01.png", "./slideshow/02.png"];
 
+const captions = [
+  "Mennesker mødes bedst ansigt til ansigt",
+  "Fællesskab begynder med et møde",
+  "Et fællesskab midt i Slagelse",
+  "Tid til samtaler, samvær og nye perspektiver"
+];
+
 
 const stories = [
   {
@@ -54,6 +61,7 @@ async function loadImages(){
 const photo=document.querySelector(".photo");
 const img=document.getElementById("slideImage");
 const prog=document.getElementById("progress");
+const cap=document.getElementById("slideCaption");
 let si=0,sti=0,mi=0;
 const DUR=8500;
 
@@ -69,6 +77,7 @@ function progress(){
 loadImages().then(images=>{
   if(!images.length) return;
   img.src=images[0];
+  if(cap) cap.textContent=captions[0];
   progress();
   if(images.length>1){
     setInterval(()=>{
@@ -76,6 +85,7 @@ loadImages().then(images=>{
       photo.classList.add("changing");
       setTimeout(()=>{
         img.src=images[si];
+        if(cap) cap.textContent=captions[si%captions.length];
         photo.classList.remove("changing");
         progress();
       },550);
